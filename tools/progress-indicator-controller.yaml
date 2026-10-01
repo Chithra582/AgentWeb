@@ -1,0 +1,13 @@
+name: "progress-indicator-controller"
+description: "Controls the visual loading progress bar (CoolIndicator) color, height, and animation speed."
+input_schema:
+  type: "object"
+  properties:
+    color_hex:
+      type: "string"
+      description: "Hexadecimal color code for the indicator line."
+    height_dp:
+      type: "integer"
+      description: "Height of the indicator bar in DP."
+  required:
+    - "color_hex"

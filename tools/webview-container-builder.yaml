@@ -1,0 +1,16 @@
+name: "webview-container-builder"
+description: "Configures and attaches an AgentWeb instance to a host Android Activity or Fragment view hierarchy."
+input_schema:
+  type: "object"
+  properties:
+    target_url:
+      type: "string"
+      description: "Initial URL to navigate to upon initialization."
+    enable_progress_bar:
+      type: "boolean"
+      description: "Whether to bind the custom CoolIndicator progress bar."
+    parent_layout_id:
+      type: "string"
+      description: "Resource ID or name of the parent ViewGroup."
+  required:
+    - "target_url"

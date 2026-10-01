@@ -1,0 +1,18 @@
+name: "js-bridge-interface-manager"
+description: "Injects native Java bridge interfaces into WebView DOM and dispatches asynchronous JS calls."
+input_schema:
+  type: "object"
+  properties:
+    interface_name:
+      type: "string"
+      description: "Name of the global JavaScript object exposed in the DOM (e.g. 'android')."
+    action:
+      type: "string"
+      enum: ["add_interface", "remove_interface", "call_js"]
+      description: "JavaScript bridge operation to perform."
+    js_method_call:
+      type: "string"
+      description: "JavaScript function string to evaluate when action is call_js."
+  required:
+    - "interface_name"
+    - "action"

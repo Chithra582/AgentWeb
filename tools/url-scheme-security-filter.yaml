@@ -1,0 +1,15 @@
+name: "url-scheme-security-filter"
+description: "Inspects and filters navigation URLs, intercepting third-party app schemes (WeChat, Alipay) safely."
+input_schema:
+  type: "object"
+  properties:
+    url:
+      type: "string"
+      description: "Navigation URL or custom scheme to evaluate."
+    action:
+      type: "string"
+      enum: ["inspect", "whitelist_scheme", "block_scheme"]
+      description: "Filter operation to perform."
+  required:
+    - "url"
+    - "action"

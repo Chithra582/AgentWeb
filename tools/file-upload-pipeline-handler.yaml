@@ -1,0 +1,16 @@
+name: "file-upload-pipeline-handler"
+description: "Handles HTML5 file chooser requests, camera intent triggers, and upload callback handshakes."
+input_schema:
+  type: "object"
+  properties:
+    accept_type:
+      type: "string"
+      description: "MIME type filter for file chooser (e.g. 'image/*', 'video/*', '*/*')."
+    allow_multiple:
+      type: "boolean"
+      description: "Whether multi-file selection is enabled."
+    include_camera:
+      type: "boolean"
+      description: "Whether to offer native camera capture in the chooser dialog."
+  required:
+    - "accept_type"
